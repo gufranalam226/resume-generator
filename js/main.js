@@ -1,31 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.4.1/docx.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-
-
-function exportToWord() {
-    const doc = new docx.Document({
-        sections: [
-            {
-                properties: {},
-                children: [
-                    new docx.Paragraph({
-                        children: [
-                            new docx.TextRun({
-                                text: document.getElementById("page").innerText,
-                                font: "Times New Roman",
-                                size: 24
-                            }),
-                        ],
-                    }),
-                ],
-            },
-        ],
-    });
-
-    docx.Packer.toBlob(doc).then((blob) => {
-        saveAs(blob, "resume.docx");
-    });
-}
 
 
 
