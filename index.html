@@ -12,6 +12,9 @@
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
 	<meta name="description" content="Online document editor like interface to create and save Resume">
 	<meta name="keywords" content="resume,cv,maker,creator,generator,iit,guwahati,iitg">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.4.1/docx.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
 </head>
 
 <body>
@@ -32,6 +35,7 @@
 
 				<button class="btn btn-block btn-primary" data-toggle="modal" data-target="#usageModal">VIEW INSTRUCTIONS</button>
 				<button class="btn btn-block btn-success" onclick="window.print()">PRINT AS PDF</button>
+				<button class="btn btn-block btn-success" onclick="exportToWord()">EXPORT AS WORD</button>
 
 				<hr>
 
